@@ -6,8 +6,5 @@ addons:
     organization: "eldantedelante-github"
     token:
       secure: 0e81eb631a15bdcf56b1b359fc47fc467ac3ef47
-
-mvn sonar:sonar \
-  -Dsonar.organization=eldantedelante-github \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=0e81eb631a15bdcf56b1b359fc47fc467ac3ef47
+script:
+  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
