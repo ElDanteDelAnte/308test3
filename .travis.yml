@@ -1,3 +1,12 @@
+language: java
+jdk:
+  - oraclejdk9
+addons:
+  sonarcloud:
+    organization: "eldantedelante-github"
+    token:
+      secure: 0e81eb631a15bdcf56b1b359fc47fc467ac3ef47
+
 mvn sonar:sonar \
   -Dsonar.organization=eldantedelante-github \
   -Dsonar.host.url=https://sonarcloud.io \
